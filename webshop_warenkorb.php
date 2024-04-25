@@ -16,8 +16,8 @@ session_start();
     <div class="container">
         <h3>Webshop</h3>
         <?php
-        $db = new SQLite3('sc_shop.db');
-        include 'sc_shop.inc.php';
+        $db = new SQLite3('webshop.db');
+        include 'webshop.inc.php';
         ?>
         <br>
         <p>Ihr Warenkorb:</p>

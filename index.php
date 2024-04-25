@@ -22,12 +22,12 @@ session_start();
             // echo "SQLite3-Treiber ist geladen.<br>";
             // $version = SQLite3::version();
             // echo "SQLite3-Version: " . $version['versionString'] . "<br>";
-            $db = new SQLite3('sc_shop.db');
+            $db = new SQLite3('webshop.db');
         } else {
             echo "<p class='error'>SQLite3-Treiber konnte nicht geladen werden.</p>";
         }
-        $db = new SQLite3('sc_shop.db');
-        include 'sc_shop.inc.php';
+        $db = new SQLite3('webshop.db');
+        include 'webshop.inc.php';
 
         // Artikel der Abteilungen
         if (isset($_GET['abt'])) {
@@ -36,7 +36,7 @@ session_start();
             $res = $db->query($sql);
 
             // Tabellen-Überschrift
-            echo "<form action='sc_shop_warenkorb.php' method='post'>";
+            echo "<form action='webshop_warenkorb.php' method='post'>";
             echo "<table>";
             echo "<tr>";
             echo "<th>Artikel</th>";

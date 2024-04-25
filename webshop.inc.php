@@ -1,6 +1,6 @@
 <?php
 // Auswahl der Abteilungen
-$db = new SQLite3('sc_shop.db');
+$db = new SQLite3('webshop.db');
 if (!($res = $db->query("SELECT * FROM abteilung"))) {
     echo "Fehler bei der Abfrage.<br>";
     exit;
